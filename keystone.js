@@ -25,6 +25,8 @@ keystone.init({
 	'session': true,
 	'auth': true,
 	'user model': 'User',
+
+	'mongo': 'naboo.mongodb.umbler.com:37462',
 });
 
 // Load your project's Models
