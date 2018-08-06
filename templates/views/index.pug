@@ -1,23 +1,161 @@
 extends ../layouts/default
 
 block content
-	.container: .jumbotron
-		img(src='/images/logo.svg', width='160')
-		h1 Welcome
-		p This is your new <a href='http://keystonejs.com' target='_blank'>KeystoneJS</a> website.
-		p It includes the latest versions of
-			| <a href='http://getbootstrap.com/' target='_blank'>Bootstrap</a>
-			| and <a href='http://www.jquery.com/' target='_blank'>jQuery</a>.
-		p Visit the <a href='http://keystonejs.com/guide' target='_blank'>Getting Started</a> guide to learn how to customise it.
-		hr
-		if user && user.canAccessKeystone
-			p
-				a(href='/keystone').btn.btn-lg.btn-primary Open the Admin UI
-		else
-			p We have created a default Admin user for you with the email <strong>gmarianelli@aol.com</strong> and the password <strong>admin</strong>.
-			p
-				a(href='/keystone/signin', style='margin-right: 10px').btn.btn-lg.btn-primary Sign in
-				|  to use the Admin UI.
-		hr
-		p Remember to <a href='https://github.com/keystonejs/keystone' target='_blank'>Star KeystoneJS on GitHub</a> and
-			| <a href='https://twitter.com/keystonejs' target='_blank'>follow @keystonejs</a> on twitter for updates.
+	header
+		.intro
+			.container
+				.row
+					.intro-text
+						h1 Nero César
+						p Coach | Consultor | Trainer
+						a(href="#sobre" class="btn btn-custom btn-lg page-scroll") Saiba mais
+
+	//- Sobre
+	#sobre
+		.container
+			.section-title.text-center.center
+				h2 Sobre
+				hr
+			.row
+				.col-xs-12.col-md-6
+					img(src="/spectrum/img/about.jpg")
+				.col-xs-12.col-md-6: .about-text
+					p
+						|Consultor empresarial, advogado e palestrante internacional, Nero César é Coach
+						|Integral Sistêmico formado pela Febracis unidade de Boston-Massachusetts
+						|Trainer da empresa canadense LeaderArtInternational. Ao longo dos últimos 14
+						|anos trabalhou como gerente empresarial de uma instituição financeira pública e
+						|ajudou mais de 500 empresas por meio de financiamentos subsidiados pelo governo,
+						|fomentando milhões de reais na economia da região.
+					p
+						|Nero César largou a estabilidade de um emprego público com uma missão de vida:
+						|ajudar as pessoas a transformar suas vidas para serem mais abundantes efelizes,
+						|caminhando junto com elas paraalcançar objetivos, realizar sonhos utilizando o
+						|processo de coaching. E também auxiliar os empresários e suas empresas atingir
+						|excelência e referência no seu mercado de atuação por meio da consultoria
+						|empresarial. 
+					p
+						|Como Consultor empresarial atua há mais de 7 anos tratando de questões
+						|relacionadas com as funcionalidades de uma empresa. Reestruturando a saúde
+						|administrativa-financeira, reorganizando a logística e o marketing e renegociando
+						|dívidas tributárias, de fornecedores e instituições bancárias.
+					p
+						|É habilitado no Brasil e nos Estados Unidos como Trainer para ministraro
+						|treinamento do curso InternationalLeader Coach Certification©  pela empresa
+						|LeaderArtInternational, sediada em Montreal-Canada. 
+					p
+						|Atuou como professor no curso federal Pronatec ministrando aulas de direito
+						|tributário, direito constitucional, direito empresarial, contabilidade pública e
+						|privada.
+					p
+						|Certificado Empretec pelo Sebrae – um seminário vivencial desenvolvido pela
+						|Organização das Nações Unidas (ONU), promovido em 34 países.
+					p
+						|Atualmente mora nos Estados Unidos, em Houston/Texas, visando aprimorar seus
+						|conhecimentos como Coach, Consultor e Trainer.
+					
+	//- Serviços
+	#servicos
+		.container
+			.section-title.text-center.center
+				h2 Áreas de atuação
+				hr
+			.row.justify-content-center
+				.col-xs-12.col-md-6
+					.panel.panel-info.box-shadow
+						.panel-heading COACH INTEGRAL SISTÊMICO
+						.panel-body
+							ul.list-group
+								li.list-group-item: <i class="fa fa-check check-blue" aria-hidden="true"></i> Coaching Pessoal
+								li.list-group-item: <i class="fa fa-check check-blue" aria-hidden="true"></i> Coaching Empresarial
+								li.list-group-item: <i class="fa fa-check check-blue" aria-hidden="true"></i> Da disfunção para abundância
+								li.list-group-item: <i class="fa fa-check check-blue" aria-hidden="true"></i> Do estado atual para o estado desejado
+								li.list-group-item: <i class="fa fa-check check-blue" aria-hidden="true"></i> Autoavaliação Sistêmica
+								li.list-group-item: <i class="fa fa-check check-blue" aria-hidden="true"></i> Estratégias para realização dos sonhos
+								li.list-group-item: <i class="fa fa-check check-blue" aria-hidden="true"></i> Plano de ação para metas e objetivos
+								li.list-group-item: <i class="fa fa-check check-blue" aria-hidden="true"></i> Reprogramação de crenças financeiras
+								li.list-group-item: <i class="fa fa-check check-blue" aria-hidden="true"></i> Autorresponsabilidade
+				.col-xs-12.col-md-6
+					.panel.panel-success.box-shadow
+						.panel-heading CONSULTOR EMPRESARIAL
+						.panel-body
+							ul.list-group
+								li.list-group-item: <i class="fa fa-check check-green" aria-hidden="true"></i> Plano de Negócios
+								li.list-group-item: <i class="fa fa-check check-green" aria-hidden="true"></i> Planejamento Estratégico
+								li.list-group-item: <i class="fa fa-check check-green" aria-hidden="true"></i> Gestão da Excelência
+								li.list-group-item: <i class="fa fa-check check-green" aria-hidden="true"></i> Controladoria Estratégica
+								li.list-group-item: <i class="fa fa-check check-green" aria-hidden="true"></i> Logística
+								li.list-group-item: <i class="fa fa-check check-green" aria-hidden="true"></i> Gestão Financeira
+								li.list-group-item: <i class="fa fa-check check-green" aria-hidden="true"></i> Gestão Comercial
+								li.list-group-item: <i class="fa fa-check check-green" aria-hidden="true"></i> Gestão de Pessoas
+								li.list-group-item: <i class="fa fa-check check-green" aria-hidden="true"></i> Gestão da Qualidade
+								li.list-group-item: <i class="fa fa-check check-green" aria-hidden="true"></i> Gestão da Produção
+								li.list-group-item: <i class="fa fa-check check-green" aria-hidden="true"></i> Renegociação de dívidas – fornecedores e bancos
+		//- Sobre
+	#visao
+		.container
+			.row
+				.col-xs-12.col-md-4
+					//- Large modal
+					button(type="button" data-toggle="modal" data-target=".modalMissao" class="btn btn-default btn-lg btn-block") Missão
+					.modal.fade.modalMissao(tabindex="-1" role="dialog" arealabelledby="minhaMissao")
+							.modal-dialog.modal-lg(role="document")
+								.modal-content
+									.modal-header
+										button(type="button" class="close" data-dismiss="modal" aria-label="Close")
+											span(aria-hidden="true") &times;
+										h4.modal-title(id="minhaMissao") Missão
+									.modal-body
+											p
+												|Atuar com excelência e profissionalismo promovendo a
+												|permanente satisfação dos coachees edos clientes
+												|empresariais, através do desenvolvimento humano e
+												|empresarial, transformando vidas e empresas disfuncionais
+												|em vidas e empresas abundantes.
+				.col-xs-12.col-md-4
+					//- Small modal
+					button(type="button" data-toggle="modal" data-target=".modalVisao" class="btn btn-default btn-lg btn-block") Visão
+					.modal.fade.modalVisao(tabindex="-1" role="dialog" arealabelledby="minhaVisao")
+							.modal-dialog.modal-lg(role="document")
+								.modal-content
+									.modal-header
+										button(type="button" class="close" data-dismiss="modal" aria-label="Close")
+											span(aria-hidden="true") &times;
+										h4.modal-title(id="minhaVisao") Visão
+									.modal-body
+											p
+												|Tornar-se uma referência excepcional como Coach e
+												|Consultor empresarial.	
+
+				.col-xs-12.col-md-4
+					button(type="button" data-toggle="modal" data-target=".modalValores" class="btn btn-default btn-lg btn-block") Valores
+					.modal.fade.modalValores(tabindex="-1" role="dialog" arealabelledby="meusValores")
+							.modal-dialog.modal-lg(role="document")
+								.modal-content
+									.modal-header
+										button(type="button" class="close" data-dismiss="modal" aria-label="Close")
+											span(aria-hidden="true") &times;
+										h4.modal-title(id="meusValores") Valores
+									.modal-body
+										ul
+											li Presteza e cortesia, buscando superar as expectativas do cliente
+											li Tratamento digno e respeitoso com todas as pessoas
+											li Qualidade de Vida no ambiente familiar e empresarial
+											li Busca permanente da Excelência Pessoal e do Crescimento Empresarial
+											li Comportamento Ético e Transparente
+											li Orgulho Profissional
+
+block css
+	link(rel="stylesheet" type="text/css" href="/spectrum/fonts/font-awesome/css/font-awesome.css")
+	link(rel="stylesheet" type="text/css"  href="/spectrum/css/style.css")
+	link(rel="stylesheet" type="text/css" href="/spectrum/css/nivo-lightbox/nivo-lightbox.css")
+	link(rel="stylesheet" type="text/css" href="/spectrumcss/nivo-lightbox/default.css")
+	link(href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800,600,300' rel='stylesheet' type='text/css')
+
+block js
+		//- script(type="text/javascript" src="/spectrum/js/SmoothScroll.js") 
+		//- script(type="text/javascript" src="/spectrum/js/nivo-lightbox.js")
+		//- script(type="text/javascript" src="/spectrum/js/jquery.isotope.js") 
+		//- script(type="text/javascript" src="/spectrum/js/jqBootstrapValidation.js") 
+		//- script(type="text/javascript" src="/spectrum/js/contact_me.js")
+		script(type="text/javascript" src="/spectrum/js/main.js")
